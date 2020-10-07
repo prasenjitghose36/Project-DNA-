@@ -130,8 +130,6 @@ h5.subtitle {
   font-weight: 400;
 }
 
-
-
 .no-padding {
   padding: 0;
 }
@@ -174,10 +172,6 @@ h5.subtitle {
   background: #00d6ed;
   height: 1px;
   margin: 10px auto;
-}
-
-.line-height{
-  line-height: 1.38;
 }
 
 /*---------- BUTTONS ----------*/
@@ -417,11 +411,11 @@ h5.subtitle {
 }
 
 .trans-navigation.header-white {
-  background: #fff;
+  background: #111;
 }
 
 .trans-navigation.header-white .navbar-nav .nav-link {
-  color: #111;
+  color: #fff;
 }
 
 .trans-navigation.header-white .navbar-nav a.active {
@@ -816,7 +810,7 @@ HISTORY MISSION
   SERVICE AREA SECTION
 ----------------------*/
 .page-banner-area.page-service {
-  background: url("../images/inf3.png") no-repeat;
+  background: url("../images/dt-1.png") no-repeat;
   background-size: cover;
 }
 
@@ -847,7 +841,7 @@ HISTORY MISSION
   margin: 0 auto;
   border-radius: 100%;
   margin-bottom: 20px;
-  background: #ffffff;
+  background: #00d6ed;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
 }
@@ -1154,12 +1148,6 @@ input[type=text], input[type=email] {
   padding-left: 10px;
 }
 
-.hilow {
-  text-align: center;
-}
-
-
-
 /* --------------
     MAP
 -----------------*/
@@ -1313,19 +1301,14 @@ BLOG SINGLE
   height: 80px;
 }
 
-.foot-pg {
-  color: #009daf;
-} 
-
-
 /*--------------------------
  FOOTER
 ----------------------*/
 #footer {
   padding-bottom: 60px;
   position: relative;
-  background: url("../images/footer.png");
-  border-top: 1px solid #ffffff;
+  background: url("../images/bg/2.png");
+  border-top: 1px solid #eee;
 }
 
 .footer-widget ul li {
@@ -1341,7 +1324,7 @@ BLOG SINGLE
 }
 
 .footer-widget h4 span {
-  color: #ffffff;
+  color: #00d6ed;
   display: block;
   font-size: 60px;
   line-height: 60px;
@@ -1373,7 +1356,7 @@ BLOG SINGLE
   letter-spacing: 1px;
   padding-top: 30px;
   margin-top: 30px;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #eee;
 }
 
 .footer-text h6 {
@@ -1381,19 +1364,19 @@ BLOG SINGLE
 }
 
 .footer-text p span {
-  color: #ffffff;
+  color: #000;
 }
 
 .footer-text p.mail {
-  color: #929292;
+  color: #00d6ed;
 }
 
 .bg-main {
-  background: #ffffff;
+  background: #F4F8FB;
 }
 
 .footer-widget a {
-  color: #ffffff;
+  color: #999;
 }
 
 /*-------------------------------
