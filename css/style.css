@@ -520,6 +520,7 @@ h5.subtitle {
 ----------------------------------*/
 .banner-area .content-padding {
   padding: 250px 0px 180px;
+  min-height: 80vh;
 }
 
 .content-padding {
