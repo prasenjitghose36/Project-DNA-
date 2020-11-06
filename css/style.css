@@ -409,11 +409,11 @@ h5.subtitle {
 }
 
 .navbar-expand-lg.trans-navigation .navbar-nav .nav-link {
-  color: #fff;
+  color: #000;
 }
 
 .trans-navigation {
-  background: transparent;
+  background: #fff;
 }
 
 .trans-navigation.header-white {
