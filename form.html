@@ -27,18 +27,18 @@
                     <h2 class="title">Apply at DNA INFOTECH</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" id="sbt2" onsubmit="send()">
                         <div class="form-row">
                             <div class="name">Name of Applicant</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="full_name" placeholder="First-Name   Middle-Name  Last-Name">
+                                <input id="name" class="input--style-6" type="text" name="full_name" placeholder="First-Name   Middle-Name  Last-Name" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Email address</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
+                                    <input id="mail" class="input--style-6" type="email" name="email" placeholder="example@email.com" required>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="name">Contact Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="number" name="email" placeholder="+XX-1234567890">
+                                    <input id="number" class="input--style-6" type="number" name="email" placeholder="+XX-1234567890" required>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                             <div class="name">Qualification</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="text" placeholder="eg:-graduate">
+                                    <input id="qual" class="input--style-6" type="text" name="text" placeholder="eg:-graduate" required>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                             <div class="name">Linkedin URL</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="url" name="Linkedin" placeholder="">
+                                    <input id="url" class="input--style-6" type="url" name="Linkedin" placeholder="" required>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                             <div class="name">Date of Birth</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="date" name="dateofbirth" placeholder="">
+                                    <input id="dob" class="input--style-6" type="date" name="dateofbirth" placeholder="" required>
                                 </div>
                             </div>
                         </div>
@@ -86,17 +86,17 @@
                             <div class="name">Upload CV</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <input class="input-file" type="file" name="file_cv" id="file" required>
                                     <label class="label--file" for="file">Choose file</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
                                 <div class="label--desc">Upload your CV/Resume or any other relevant file. Max file size 50 MB</div>
                             </div>
                         </div>
-                    </form>
-                </div>
                 <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Send Application</button>
+                    <button id="sbt" class="btn btn--radius-2 btn--blue-2" type="submit">Send Application</button>
+                </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -109,7 +109,55 @@
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBTQEAnErFYyXiNAE_l_4bqu6z8tjgqdBY",
+    authDomain: "dnaform2.firebaseapp.com",
+    projectId: "dnaform2",
+    storageBucket: "dnaform2.appspot.com",
+    messagingSenderId: "363882630592",
+    appId: "1:363882630592:web:ccde91d50f1c896bebcc25"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+    <script>
+        file.addEventListener('change',function(e){
+            for(let i=0;i<e.target.files.length;i++)
+            {
+                let cv=e.target.files[i];
+                let storageRef=firebase.storage().ref("cvs/"+mail.value);
+                let task=storageRef.put(cv);
+            }
+        console.log("here");
+        });
+        function send() {
+            var name = document.getElementById("name").value;
+            var qual = document.getElementById("qual").value;
+            var number = document.getElementById("number").value;
+            var mail = document.getElementById("mail").value;
+            var url = document.getElementById("url").value;
+            var dob = document.getElementById("dob").value;
+            firebase.database().ref("users/").push().set({
+            "name": name,
+            "email": mail,
+            "qualification": qual,
+            "linkedin": url,
+            "number": number,
+            "dob": dob
+        });
+        }
+    </script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
 <!-- end document-->

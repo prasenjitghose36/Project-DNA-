@@ -76,18 +76,18 @@
                             Application Services
                         </a>
                         <a class="dropdown-item " href="infrastructure_management.html" target="blank">
-                            Infrastructure Services 
+                            Infrastructure Management 
                         </a>
                         <a class="dropdown-item " href="fintech_consultation.html" target="blank">
                             Fintech Consultation
                         </a>
-                        <a class="dropdown-item " href="testing_services.html" target="blank">
-                            Testing Services
+                        <a class="dropdown-item " href="" target="blank">
+                            Link Building
                         </a>
 
                     </div>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#industries" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#service" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Industries
                         </a>
                 </li>
@@ -227,18 +227,8 @@
                     <h2 class="subtitle">About us</h5>
                    <!-- <h3>We are making beautiful <br>design layout for your business</h3>-->
                     <h5>DNA Infotech brings in the best of breed technology capabilities in ensuring clients have competitive advantage in the marketplace. We do the footwork to engage best of talent and oversee engagement success that results in major efficiencies that provide a high return on investment for our clients.</h5>
-                    <br><h5>Bringing a full range of experience and expertise to each client engagement to help companies navigate their specific business situation. Our capabilities include strategic planning, digital and operating model challenges, business architecture development, IT sourcing and procurement. Our consultants uncover technology barriers to business growth and use their unique blend of business and technology experience to solve unique challenges of our clients.</h5>
-                    <br><h5>Data & Analytics technology capabilities drives the fundamentals of building the future of any business and in doing so, DNA Infotech aims to power organizations with its focus on</h5>
-                        <br>
-                        <h5>
-                        <ul>
-                        <li>Data Analytics</li>
-                        <li>Machine Learning</li>
-                        <li>AI Application Development</li>
-                    </ul>
-                    </h5>
-                    <br> 
-                    <h5>We partner with clients to accelerate the pace of data innovation and welcome a new era of software development as we deliver a full-scale product development strategy, underpinned by the latest technology innovations in the financial sector. We bring in a neutral view and consult clients select the best 3rd party product which right fits to their existing technology landscape.</h5>       
+                    <br><h5>Our service offerings mitigates project risk, maximizes digital solution development velocity, and ensures exceptional, people-centric user experiences. We provide clients with the right expertise at the right time during the product & application development process.</h5>
+
                     <!--<ul class="about-list">
                         <li><i class="icofont icofont-check-circled"></i> Responsive site</li>
 
@@ -325,7 +315,7 @@
                         </div>
                         <div class="service-inner">
                             <span style="font-size: 21px; color: black; font-weight: bold;">Testing services</span><br>
-                            <a href="testing_services.html"><button type="button" class="btn btn-info">Know More</button></a>
+                            <a href=""><button type="button" class="btn btn-info">Know More</button></a>
                         </div>
                     </div>
                 </div>
@@ -335,7 +325,7 @@
                             <img src="images/icon/6.jpg" alt="service-icon" class="img-fluid"height="384" width="384">
                         </div>
                         <div class="service-inner">
-                            <span style="font-size: 21px; color: black; font-weight: bold;">Infrastructure Services</span>
+                            <span style="font-size: 21px; color: black; font-weight: bold;">Infrastructure Management</span>
                             <a href="infrastructure_management.html"><button type="button" class="btn btn-info">Know More</button></a>
                         </div>
                     </div>
@@ -652,33 +642,39 @@
             <div class="row">
                 <div class="col-lg-8 col-sm-12 m-auto">
                     <div class="contact-form ">
-                        <form id="contactform">
+                        <form id="contactform" class="gform pure-form pure-form-stacked" method="POST" data-email="dnainfotech1111@gamil.com" action="https://script.google.com/macros/s/AKfycbxqgXLoGTmycqQOB66WceHu5FyehEr4GvsAvMwT4Hl5tj2dri-VOmNy/exec">
                             <!-- form message -->
                             <div class="row">
                                 <div class="col-12">
+<!--
                                     <div class="alert alert-success contact__msg" style="display: none" role="alert">
                                         Your message was sent successfully.
                                     </div>
+-->
                                 </div>
                             </div>
                             <!-- end message -->
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <input id="name" name="name" type="text" class="form-control" placeholder="Name" required>
+                                    <input id="name" name="name" type="text" class="form-control" placeholder="name" required>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <input id="email" name="email" type="text" class="form-control" placeholder="Email" required>
+                                    <input id="email" name="email" type="text" class="form-control" placeholder="email" required>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <input id="subject name="subject" type="text" class="form-control" placeholder="Subject" required>
+                                    <input id="subject" name="subject" type="text" class="form-control" placeholder="subject" required>
                                 </div>
                                 <div class="col-12 form-group">
-                                    <textarea id="message" name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                                    <textarea id="message" name="message" class="form-control" rows="6" placeholder="message" required></textarea>
                                 </div>
                                 <div class="col-12 text-center">
-                                    <input name="submit" type="submit" class=" btn btn-hero btn-circled" value="Send Message">
+                                    <button class="btn btn-hero btn-circled">Send Message</button>
                                 </div>
                             </div>
+                            <div id="thanks" style="margin-top: 15px;" class="thankyou_message" style="display:none;">
+      <h2><em>Thanks</em> for contacting us!
+        We will get back to you soon!</h2>
+    </div>
                         </form>
                     </div>
                 </div>
@@ -781,7 +777,7 @@
 </section>
 <!--  FOOTER AREA END  -->
 
-   
+  <script data-cfasync="false" src="form-submission-handler.js"></script> 
 
     <!-- 
     Essential Scripts
@@ -789,7 +785,7 @@
     <!--Typed.js-->
     <script>window.onload=function(){
         var typed3 = new Typed('#typed3', {
-        strings: ['Technology is the New Business Linking Market','Driving Digital Transformation beyond the obvious', 'Bringing Data to the forefront of strategy','Transforming Application Management & Testing Services'],
+        strings: ['Technology is the New Business Linking Market, Leadership to Technology leadership', 'Driving Digital Transformation beyond the obvious, Aligning transformation to be customer centric','Bringing Data to the forefront of strategy, Making Data the core for business insights', 'Application Management & Testing Services, Talent led IT services to transform IT landscape'],
         typeSpeed: 50,
         backSpeed: 60,
         startDelay: 500,
@@ -806,6 +802,7 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+            document.getElementById("thanks").style.display="none";
     }
     </script>
 
